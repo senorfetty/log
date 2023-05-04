@@ -1,0 +1,7 @@
+{% if user.is_admin %}
+<h1>ADMIN DASHBOARD</h1>
+<h2>Hello, {{ request.user.username }}</h2>
+{% else %}
+<h1>CUSTOMER DASHBOARD</h1>
+<h2>Hello, {{ request.user.username }}</h2>
+{% endif %}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Customer Registration</title>
+</head>
+<body>
+        <form method="post" style="border: 1px;">
+        {% csrf_token %}
+        {% for message in messages %}
+        {{ messages }}
+        {% endfor %}
+        <h3>Create Account</h3>
+        {{ form.errors }}
+        <a href="{% url 'ingia' %}">Already Have an Account? Click Here</a> <br>
+        {{ form.username.label }}
+        {{ form.username }}
+        <br>
+        {{ form.first_name.label }}
+        {{ form.first_name }}
+        <br>
+        {{ form.last_name.label }}
+        {{ form.last_name }} 
+        <br>
+        {{ form.phone_number.label }}
+        {{ form.phone_number }}
+        <br>
+        {{ form.email.label }}
+        {{ form.email }}        
+        <br>
+        {{ form.password1.label }}
+        {{ form.password1 }}
+        <br>
+        {{ form.password2.label }}
+        {{ form.password2 }}
+        <br>
+        <button>Sign Up</button>
+        </form>
+</body>
+</html>
+       
